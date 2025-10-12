@@ -12,6 +12,6 @@
     </nav>
 </div>
 <div class="container bg-white p-5 shadow-sm mt-3 mb-5 rounded">
-    <img src="assets/gambar/struktur.jpg" alt="Struktur Organisasi" width="100%">
+    <img src="assets/gambar/struktur cimahi.jpeg" alt="Struktur Organisasi" width="100%">
 </div>
 @endsection

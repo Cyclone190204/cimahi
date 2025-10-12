@@ -50,7 +50,7 @@
             @enderror
         </div>
         
-        <div class="col-sm-3">
+        <div class="col-sm-8">
             <label class="form-label">Jenis Kelamin</label>
             <select name="jenis_kelamin" class="form-select @error('jenis_kelamin') is-invalid @enderror" required>
                 <option value="l" selected>Laki-laki</option>
@@ -74,9 +74,11 @@
             @error('tanggal_pengajuan')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        <div class="col-sm-8">
-            <button class="btn btn-success" type="submit">Submit Form</button>
+        </div>
+        <div class="col-md-8 text-center mt-3">
+            <button class="btn btn-success" type="submit">Submit</button>
         </div>
     </form>
 </div>
 @endsection
+

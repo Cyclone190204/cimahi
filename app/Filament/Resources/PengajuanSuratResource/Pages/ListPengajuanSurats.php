@@ -16,4 +16,4 @@ class ListPengajuanSurats extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
-}
+}   

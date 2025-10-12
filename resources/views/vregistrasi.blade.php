@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Peta Desa')
+@section('title', 'Registrasi')
 
 @section('content')
 <section class="bg-white vh-100">

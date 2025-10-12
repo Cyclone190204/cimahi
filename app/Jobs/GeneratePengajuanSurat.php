@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use PhpOffice\PhpWord\TemplateProcessor;
 use PhpOffice\PhpWord\IOFactory;
-use TCPDF;
+use PhpOffice\PhpWord\Settings;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
+use NcJoes\OfficeConverter\OfficeConverter;
 
 class GeneratePengajuanSurat implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public function __construct(
-        public int $id
+        public int $id,
+        public string $outputFormat = 'pdf'
     ) {}
 
     public function handle(): void
@@ -48,7 +52,8 @@ class GeneratePengajuanSurat implements ShouldQueue
 
         $forms = collect($pengajuanSurat->data + [
             'nomor' => $pengajuanSurat->nomor,
-            'verified_at' => ($pengajuanSurat->verified_at ?? now())->format('d-m-Y'),
+            'verified_at' => $pengajuanSurat->verified_at ?? "-",
+            'tanggal_pengajuan' => $pengajuanSurat->tanggal_pengajuan ?? "-",
         ]);
 
         $value_format = collect($surat->value_format);
@@ -59,7 +64,6 @@ class GeneratePengajuanSurat implements ShouldQueue
 
                 if (filled($dirt)) {
                     $ext = explode(':', $between);
-
                     $type = 'text';
                     $valFn = fn($val) => $val;
 
@@ -83,14 +87,14 @@ class GeneratePengajuanSurat implements ShouldQueue
                             break;
                     }
 
-                    $v = $valFn($v);
+                    $v = rescue(fn() => $valFn($v), $v);
                     return [$k => str($value_format[$k])->replace($dirt, $v)->toString()];
                 }
             }
 
             return [$k => $v];
         });
-        
+
         try {
             $template = new TemplateProcessor($templatePath);
             $template->setValues($forms->toArray());
@@ -98,40 +102,56 @@ class GeneratePengajuanSurat implements ShouldQueue
             $dir = "surat/pengajuan/{$surat->id}";
             Storage::disk('public')->makeDirectory($dir);
 
-            $filename = str()->random(10) . '.docx';
-            $filepath = storage_path("app/public/{$dir}/{$filename}");
+            // ==== Simpan Word ====
+            $baseFilename = str()->random(10);
+            $docxFilename = $baseFilename . '.docx';
+            $docxFilepath = storage_path("app/public/{$dir}/{$docxFilename}");
+            $template->saveAs($docxFilepath);
 
-            Log::info("Menyimpan surat di: {$filepath}");
+            if (!file_exists($docxFilepath)) {
+                Log::error("Gagal menyimpan file surat.");
+                return;
+            }
+            Log::info("Surat berhasil disimpan: {$docxFilepath}");
 
-            $template->saveAs($filepath);
+            // ==== Convert ke PDF langsung via PhpWord ====
+            if ($this->outputFormat === 'pdf' || $this->outputFormat === 'both') {
+                // Set PDF renderer
+                Settings::setPdfRendererName(Settings::PDF_RENDERER_TCPDF);
+                Settings::setPdfRendererPath(base_path('vendor/tecnickcom/tcpdf'));
 
-            if (file_exists($filepath)) {
-                Log::info("Surat berhasil disimpan: {$filepath}");
-                $pengajuanSurat->addMediaFromDisk("{$dir}/{$filename}", 'public')
-                    ->toMediaCollection('cached_berkas');
-
-                // Konversi ke PDF
-                require_once base_path('vendor/phpoffice/phpword/bootstrap.php');
-                \PhpOffice\PhpWord\Settings::setPdfRendererPath(base_path('includes/plugins/TCPDF'));
-                \PhpOffice\PhpWord\Settings::setPdfRendererName('TCPDF');
-
-                $pdfFilename = str_replace('.docx', '.pdf', $filename);
+                // $phpWord = IOFactory::load($docxFilepath);
+                $pdfFilename = $baseFilename . '.pdf';
+                $pdfDir = storage_path("app/public/{$dir}");
                 $pdfFilepath = storage_path("app/public/{$dir}/{$pdfFilename}");
 
-                $phpWord = IOFactory::load($filepath);
-                $pdfWriter = IOFactory::createWriter($phpWord, 'PDF');
-                $pdfWriter->save($pdfFilepath);
+                // pastikan folder ada
+                if (!file_exists($pdfDir)) {
+                    mkdir($pdfDir, 0777, true);
+                }
+
+                $converter = new OfficeConverter($docxFilepath, $pdfDir);
+                $converter->convertTo($pdfFilename);
+
+                // $pdfWriter = IOFactory::createWriter($phpWord, 'PDF');
+                // $pdfWriter->save($pdfFilepath);
 
                 if (file_exists($pdfFilepath)) {
                     Log::info("Surat berhasil dikonversi ke PDF: {$pdfFilepath}");
                     $pengajuanSurat->addMediaFromDisk("{$dir}/{$pdfFilename}", 'public')
                         ->toMediaCollection('cached_berkas');
                 } else {
-                    Log::error("Gagal mengonversi file surat ke PDF.");
+                    Log::error("Gagal mengonversi surat ke PDF.");
                 }
-            } else {
-                Log::error("Gagal menyimpan file surat.");
             }
+
+            // ==== Simpan Word ke media jika 'docx' atau 'both' ====
+            if ($this->outputFormat === 'docx' || $this->outputFormat === 'both') {
+                $pengajuanSurat->addMediaFromDisk("{$dir}/{$docxFilename}", 'public')
+                    ->toMediaCollection('cached_berkas');
+                Log::info("File Word berhasil disimpan ke media collection: {$docxFilename}");
+            }
+
         } catch (\Exception $e) {
             Log::error("Terjadi kesalahan saat membuat surat: " . $e->getMessage());
         }

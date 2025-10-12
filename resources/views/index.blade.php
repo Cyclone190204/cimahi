@@ -1,48 +1,59 @@
 @extends('layouts.app')
 
-@section('title', 'Desa Sukamanis')
+@section('title', 'Desa CIMAHI')
 
 @section('content')
 <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
     </div>
+
     <div class="carousel-inner">
+
+        <!-- Slide 1 -->
         <div class="carousel-item active">
-            <img src="assets/gambar/situgunung.jpg" height="800px" class="d-block w-100 img-crousel" alt="gambar1">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar1.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar1">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar1.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar2">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar2.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar3">
+                </div>
             </div>
         </div>
+
+        <!-- Slide 2 -->
         <div class="carousel-item">
-            <img src="assets/gambar/situgunung2.jpg" height="800px" class="d-block w-100 img-crousel" alt="gambar2">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar3.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar4">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar4.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar5">
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/gambar/fotbar1.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar6">
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="assets/gambar/kantor.jpg" height="800px" class="d-block w-100 img-crousel" alt="gambar3">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-        </div>
+
     </div>
+
+    <!-- Control -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon"></span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon"></span>
     </button>
 </div>
-<div class="biru p-4">
-    <h5 class="text-center text-white"><b>BERITA TERKINI DESA SUKAMANIS</b></h5>
+
+<div class="biru p-4 mt-5">
+    <h5 class="text-center text-white"><b>BERITA TERKINI DESA CIMAHI</b></h5>
 </div>
 <div class="container bg-white p-5 shadow">
     <h5>BERITA DESA</h5>
@@ -61,7 +72,7 @@
     </div>
 </div>
 <div class="biru p-4">
-    <h5 class="text-center text-white"><b>GALERI DESA SUKAMANIS</b></h5>
+    <h5 class="text-center text-white"><b>GALERI DESA CIMAHI</b></h5>
 </div>
 <div class="container bg-white p-5 shadow">
     <h5>GALERI DESA</h5>
@@ -76,7 +87,7 @@
     </div>
 </div>
 <div class="biru p-4">
-    <h5 class="text-center text-white"><b>APARATUR DESA SUKAMANIS</b></h5>
+    <h5 class="text-center text-white"><b>APARATUR DESA CIMAHI</b></h5>
 </div>
 <div class="container bg-white p-5 shadow">
     <h5>APARATUR DESA</h5>
@@ -109,7 +120,7 @@
     </nav> --}}
 </div>
 <div class="biru p-4">
-    {{-- <h5 class="text-center text-white"><b>PETA DESA SUKAMANIS</b></h5>
+    {{-- <h5 class="text-center text-white"><b>PETA DESA CIMAHI</b></h5>
 </div>
 <div class="bg-white">
     <iframe src="   "" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

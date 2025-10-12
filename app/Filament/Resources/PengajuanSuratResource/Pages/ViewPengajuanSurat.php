@@ -21,10 +21,8 @@ class ViewPengajuanSurat extends ViewRecord
         return $infolist
             ->schema([
                 TextEntry::make('nomor'),
-                TextEntry::make('tanggal.pengajuan'),
                 TextEntry::make('surat.name'),
                 TextEntry::make('user.name'),
-                TextEntry::make('tanggal.pengajuan'),
                 TextEntry::make('status')
                     ->badge()
                     ->color(fn ($state): string => match ($state) {
@@ -48,10 +46,18 @@ class ViewPengajuanSurat extends ViewRecord
                             ->requiresConfirmation()
                             ->action(function (PengajuanSurat $record) {
                                 GeneratePengajuanSurat::dispatchSync($record->id);
-                            })
+                            }),
+                        Action::make('signDocument')
+                            ->icon('heroicon-o-pencil-square')
+                            ->visible(fn(PengajuanSurat $record) => $record->getFirstMedia('cached_berkas'))
+                            ->url(fn(PengajuanSurat $record) => route('sign.document', ['id' => $record->id]))
+                            ->openUrlInNewTab(),
                     ]),
                 TextEntry::make('verified_at')
                     ->dateTime(),
+                TextEntry::make('tanggal_pengajuan')
+                    ->date(),
+                
             ]);
     }
 }

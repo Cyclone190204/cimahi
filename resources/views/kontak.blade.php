@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Desa Sukamanis</title>
+    <title>Kontak Desa Cimahi</title>
     <style>
         body {
             margin: 0;
@@ -15,7 +15,7 @@
         }
 
         .header {
-            background-color: #1E88E5;
+            background-color: #F1BB6A;
             color: white;
             padding: 15px;
         }
@@ -65,7 +65,7 @@
         }
 
         .footer {
-            background-color: #1E88E5;
+            background-color: #F1BB6A;
             color: white;
             text-align: center;
             padding: 10px;
@@ -76,21 +76,21 @@
 </head>
 <body>
     <header class="header">
-        <h1>Kontak Desa Sukamanis</h1>
+        <h1>Kontak Desa Cimahi</h1>
     </header>
     <main class="main-content">
         <section class="contact-info">
-            <img src="assets/gambar/kantor.jpg" alt="Kantor Desa Sukamanis">
+            <img src="assets/gambar/kantor.jpg" alt="Kantor Desa Cimahi">
             <div class="contact-details">
                 <h2>Informasi Kontak</h2>
-                <p><strong>Alamat :</strong> JL.Raya Cisarua Km.1 no.2 Kadudampit Kab Sukabumi Kode Pos 43153</p>
-                <p><strong>whatsapp :</strong> 085863840858</p>
-                <p><strong>Email :</strong> desasukamanis@gmail.com</p>
+                <p><strong>Alamat :</strong> JL. Cikukulu, Jl. Cicantayan No.171, Kabupaten Sukabumi, Jawa Barat 43155, Indonesia.3</p>
+                <p><strong>whatsapp :</strong> 085778019839</p>
+                <p><strong>Email :</strong> desacimahi@gmail.com</p>
             </div>
         </section>
     </main>
     <footer class="footer">
-        © 2025 Copyright: <a href="" class="text-white">BSI Explore Kelompok 4</a>
+        © 2025 Copyright: <a href="" class="text-white">PKL BSI 2025</a>
     </footer>
 </body>
 </html>

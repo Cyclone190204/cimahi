@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\PengajuanSuratResource\Pages;
 use App\Filament\Resources\PengajuanSuratResource\RelationManagers;
+use App\Filament\Resources\PengajuanSuratResource\RelationManagers\SignSuratsRelationManager;
 use App\Models\PengajuanSurat;
 use App\Models\Surat;
 use App\StatusPengajuanSurat;
@@ -70,6 +71,9 @@ class PengajuanSuratResource extends Resource
                     ->addable(false)
                     ->deletable(false),
                 Forms\Components\DateTimePicker::make('verified_at'),
+                Forms\Components\DatePicker::make('tanggal_pengajuan')
+                    ->default(now())
+                    ->required(),
             ]);
     }
 
@@ -125,7 +129,7 @@ class PengajuanSuratResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            SignSuratsRelationManager::class,
         ];
     }
 

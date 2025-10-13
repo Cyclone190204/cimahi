@@ -125,16 +125,6 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-
-        {{-- Tanggal Pengajuan --}}
-         <div class="col-md-8">
-            <label class="form-label">tanggal pengajuan</label>
-            <input name="tanggal_pengajuan" type="text" class="form-control @error('tanggal_pengajuan') is-invalid @enderror" required>
-            <!-- Teks contoh abu-abu kecil -->
-            <p class="mt-1" style="font-size: 0.875rem; color: #6b7280;">Contoh: 28-Oktober-2025</p>
-            @error('tanggal_pengajuan')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
       </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>

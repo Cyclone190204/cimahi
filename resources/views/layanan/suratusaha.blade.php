@@ -160,25 +160,14 @@
 
 
         {{-- Melengkapi Persyaratan --}}
-        <div class="row justify-content-md-center mb-3">
+        < class="row justify-content-md-center mb-3">
             <div class="col-sm-8">
                 <label class="form-label">Melengkapi Persyaratan</label>
                 <textarea name="melengkapi_persyaratan" class="form-control @error('melengkapi_persyaratan') is-invalid @enderror"></textarea>
                 @error('melengkapi_persyaratan')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
-            </div>
-        </div>
-
-        {{-- Tanggal Pengajuan --}}
-        <div class="row justify-content-md-center mb-3">
-            <div class="col-md-8">
-                <label class="form-label">Tanggal Pengajuan</label>
-                <input name="tanggal_pengajuan" type="text" class="form-control @error('tanggal_pengajuan') is-invalid @enderror">
-                @error('tanggal_pengajuan')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
+</div>
 
        </div>
         <div class="col-md-8 text-center mt-3">

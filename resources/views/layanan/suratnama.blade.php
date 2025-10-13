@@ -138,13 +138,6 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        
-        <div class="col-md-8">
-            <label class="form-label">Tanggal Pengajuan</label>
-            <input name="tanggal_pengajuan" type="text" class="form-control @error('tanggal_pengajuan') is-invalid @enderror">
-            @error('tanggal_pengajuan')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
         </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>

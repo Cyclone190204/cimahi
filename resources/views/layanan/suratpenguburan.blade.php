@@ -19,13 +19,21 @@
         </div>
         
         <div class="col-sm-6">
-            <label class="form-label">Tempat Lahir</label>
+            <label class="form-label"> Jenis Kelamin</label>
+            <input name="jenis_kelamin" type="text" class="form-control @error('jenis_kelamin') is-invalid @enderror" required>
+            @error('jenis_kelamin')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+        
+         <div class="col-sm-6">
+            <label class="form-label"> tempat lahir</label>
             <input name="tempat_lahir" type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" required>
             @error('tempat_lahir')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        
+
         <div class="col-sm-2">
             <label class="form-label">Tanggal Lahir</label>
             <input name="tanggal_lahir" type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
@@ -34,10 +42,19 @@
             @enderror
         </div>
         
+
         <div class="col-sm-8">
-            <label class="form-label">NIK</label>
-            <input name="nik" type="text" class="form-control @error('nik') is-invalid @enderror" required>
-            @error('nik')
+            <label class="form-label">umur</label>
+            <input name="umur" type="text" class="form-control @error('umur') is-invalid @enderror" required>
+            @error('umur')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="col-sm-8">
+            <label class="form-label">Status Perkawinan</label>
+            <input name="status" type="text" class="form-control @error('status') is-invalid @enderror" required>
+            @error('status')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
@@ -50,13 +67,10 @@
             @enderror
         </div>
         
-        <div class="col-sm-8">
-            <label class="form-label">Jenis Kelamin</label>
-            <select name="jenis_kelamin" class="form-select @error('jenis_kelamin') is-invalid @enderror" required>
-                <option value="l" selected>Laki-laki</option>
-                <option value="p">Perempuan</option>
-            </select>
-            @error('jenis_kelamin')
+       <div class="col-sm-8">
+            <label class="form-label">NIK</label>
+            <input name="nik" type="text" class="form-control @error('nik') is-invalid @enderror" required>
+            @error('nik')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
@@ -68,12 +82,46 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <div class="col-md-8">
-            <label class="form-label">Tanggal Pengajuan</label>
-            <input name="tanggal_pengajuan" type="text" class="form-control @error('tanggal_pengajuan') is-invalid @enderror">
-            @error('tanggal_pengajuan')
+
+         <div class="col-sm-8">
+            <label class="form-label">pada hari</label>
+            <textarea name="pada_hari" class="form-control @error('pada_hari') is-invalid @enderror" required></textarea>
+            @error('pada_hari')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+        </div>
+
+        <div class="col-sm-2">
+            <label class="form-label">Tanggal</label>
+            <input name="tanggal" type="date" class="form-control @error('tanggal') is-invalid @enderror" required>
+            @error('tanggal')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="col-sm-8">
+            <label class="form-label">hari pemakaman</label>
+            <textarea name="hari_pemakaman" class="form-control @error('hari_pemakaman') is-invalid @enderror" required></textarea>
+            @error('hari_pemakaman')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+         <div class="col-sm-8">
+            <label class="form-label">tanggal pemakaman</label>
+            <textarea name="tanggal_pemakaman" class="form-control @error('tanggal_pemakaman') is-invalid @enderror" required></textarea>
+            @error('tanggal_pemakaman')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+         <div class="col-sm-8">
+            <label class="form-label">tempat pemakaman</label>
+            <textarea name="tempat_pemakaman" class="form-control @error('tempat_pemakaman') is-invalid @enderror" required></textarea>
+            @error('tempat_pemakaman')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
         </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>

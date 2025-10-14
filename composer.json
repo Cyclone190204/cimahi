@@ -12,6 +12,7 @@
         "filament/spatie-laravel-media-library-plugin": "^3.2",
         "illuminate/filesystem": "*",
         "laravel/framework": "*",
+        "laravel/horizon": "^5.35",
         "laravel/tinker": "^2.9",
         "maatwebsite/excel": "^3.1",
         "mpdf/mpdf": "^8.2",

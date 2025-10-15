@@ -127,29 +127,10 @@ return [
     | to add your own service providers to this array.
     |
     */
-'aliases' => [
-    // alias lainnya
-    'Session' => Illuminate\Support\Facades\Session::class,
-],
-
-
-
-
-    
-
-    /*
-    |--------------------------------------------------------------------------
-    | Class Aliases
-    |--------------------------------------------------------------------------
-    |
-    | Here you may list all of the class aliases that will be available
-    | throughout your application. These aliases are "lazy" loaded so
-    | they don't affect the performance of your application.
-    |
-    */
-
     'aliases' => [
-        'Excel' => Maatwebsite\Excel\Facades\Excel::class, // Alias for Excel
+        'App'   => Illuminate\Support\Facades\App::class,
+        'Blade' => Illuminate\Support\Facades\Blade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Session' => Illuminate\Support\Facades\Session::class,
     ],
-
 ];

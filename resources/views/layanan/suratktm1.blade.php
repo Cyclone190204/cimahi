@@ -35,8 +35,8 @@
         <div class="row justify-content-md-center mb-3">
             <div class="col-sm-8">
                 <label class="form-label">Nama Lengkap</label>
-                <input name="name" type="text" class="form-control @error('name') is-invalid @enderror" required>
-                @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                <input name="nama" type="text" class="form-control @error('nama') is-invalid @enderror" required>
+                @error('nama') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
         </div>
 
@@ -51,15 +51,15 @@
 
         {{-- Tempat & Tanggal Lahir --}}
         <div class="row justify-content-md-center mb-3">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <label class="form-label">Tempat Lahir</label>
                 <input name="tempat_lahir" type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" required>
                 @error('tempat_lahir') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
-            <div class="col-sm-2">
-                <label class="form-label">Tanggal Lahir</label>
-                <input name="tanggal_lahir" type="text" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
-                @error('tanggal_lahir') <div class="invalid-feedback">{{ $message }}</div> @enderror
+           <div class="col-sm-8">
+                    <label class="form-label">Tanggal lahir</label>
+                    <input name="tanggal_lahir" type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
+                    @error('tanggal_lahir')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
         </div>
 
@@ -125,11 +125,10 @@
         {{-- Status --}}
         <div class="row justify-content-md-center mb-3">
             <div class="col-md-8">
-                <label class="form-label">Status</label>
+                <label class="form-label">Status perkawinan</label>
                 <input name="status" type="text" class="form-control @error('status') is-invalid @enderror">
                 @error('status') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
-        </div>
        </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>

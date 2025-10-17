@@ -18,7 +18,7 @@
             @enderror
         </div>
         
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <label class="form-label"> Jenis Kelamin</label>
             <input name="jenis_kelamin" type="text" class="form-control @error('jenis_kelamin') is-invalid @enderror" required>
             @error('jenis_kelamin')
@@ -26,7 +26,7 @@
             @enderror
         </div>
         
-         <div class="col-sm-6">
+         <div class="col-sm-8">
             <label class="form-label"> tempat lahir</label>
             <input name="tempat_lahir" type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" required>
             @error('tempat_lahir')
@@ -34,9 +34,9 @@
             @enderror
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-8">
             <label class="form-label">Tanggal Lahir</label>
-            <input name="tanggal_lahir" type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
+            <input name="tanggal_lahir"  class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
             @error('tanggal_lahir')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -91,9 +91,9 @@
             @enderror
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-8">
             <label class="form-label">Tanggal</label>
-            <input name="tanggal" type="date" class="form-control @error('tanggal') is-invalid @enderror" required>
+            <input name="tanggal"  class="form-control @error('tanggal') is-invalid @enderror" required>
             @error('tanggal')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -121,8 +121,7 @@
             @error('tempat_pemakaman')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
-        </div>
+</div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>
         </div>

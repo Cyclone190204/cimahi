@@ -252,7 +252,7 @@
         </div>
 
         <div class="col-md-6">
-            <label class="form-label">tempat lahir ke 2</label>
+            <label class="form-label">tempat lahir ke 5</label>
             <input name="tempat_lahir_ke_5" type="text" class="form-control @error('tempat_lahir_ke_5') is-invalid @enderror" required>
             @error('tempat_lahir_ke_5')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -261,7 +261,7 @@
 
        <div class="col-md-6">
             <label class="form-label">tanggal lahir ke 5</label>
-            <input name="tanggal_lahir_ke_5 type="text" class="form-control @error('tanggal_lahir_ke_5') is-invalid @enderror" required>
+            <input name="tanggal_lahir_ke_5" type="text" class="form-control @error('tanggal_lahir_ke_5') is-invalid @enderror" required>
             @error('tanggal_lahir_ke_5')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -281,7 +281,6 @@
             @error('jenis_kelamin_ke_5')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
         </div>
         <div class="col-md-8 text-center">
             <button class="btn btn-success" type="submit">Submit Form</button>

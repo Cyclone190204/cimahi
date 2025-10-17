@@ -87,7 +87,7 @@
         </div>
 
         <div class="col-md-8">
-            <label class="form-label">Kampung</label>
+            <label class="form-label">Alamat</label>
             <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror"></textarea>
             @error('alamat')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -111,7 +111,7 @@
         </div>
 
         {{-- Keterangan Perbedaan Nama --}}
-        <p class="text-center text-muted mt-4">(DalamNama tersebut di atas adalah benar Warga Desa Cimahi Kecamatan Cicantayan Kabupaten Sukabumi, 
+        <p class="text-center text-muted mt-4">(Dalam Nama tersebut di atas adalah benar Warga Desa Cimahi Kecamatan Cicantayan Kabupaten Sukabumi, 
             yang mempunyai Perbedaan Nama Sebagai Berikut) </p>
             <hr />
         
@@ -137,7 +137,6 @@
             @error('nama_buku_nikah')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
         </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>

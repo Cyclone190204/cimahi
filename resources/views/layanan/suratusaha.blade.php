@@ -24,7 +24,7 @@
         </div>
 
         {{-- Nama --}}
-        <div class="row justify-content-md-center mb-3">
+        <div class="row justify-content-md-center mb-3  ">
             <div class="col-sm-8">
                 <label class="form-label">Nama</label>
                 <input name="nama" type="text" class="form-control @error('nama') is-invalid @enderror" required>
@@ -160,7 +160,7 @@
 
 
         {{-- Melengkapi Persyaratan --}}
-        < class="row justify-content-md-center mb-3">
+        
             <div class="col-sm-8">
                 <label class="form-label">Melengkapi Persyaratan</label>
                 <textarea name="melengkapi_persyaratan" class="form-control @error('melengkapi_persyaratan') is-invalid @enderror"></textarea>
@@ -168,8 +168,6 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
 </div>
-
-       </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>
         </div>

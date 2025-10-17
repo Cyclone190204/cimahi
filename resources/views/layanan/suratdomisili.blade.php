@@ -53,15 +53,14 @@
         </div>
 
         {{-- Tanggal Lahir --}}
-        <div class="col-md-8">
+         <div class="col-md-8">
             <label class="form-label">Tanggal Lahir</label>
             <input name="tanggal_lahir" type="text" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
-            <!-- Teks contoh abu-abu kecil -->
-            <p class="mt-1" style="font-size: 0.875rem; color: #6b7280;">Contoh: 28-Oktober-2025</p>
             @error('tanggal_lahir')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
+
 
         {{-- Kewarganegaraan --}}
         <div class="col-md-8">
@@ -119,13 +118,12 @@
 
 
          <div class="col-md-8">
-            <label class="form-label">kampung</label>
-            <input name="kampung" type="text" class="form-control @error('kampung') is-invalid @enderror" required>
-            @error('kampung')
+            <label class="form-label">Alamat</label>
+            <input name="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" required>
+            @error('alamat')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-      </div>
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>
         </div>

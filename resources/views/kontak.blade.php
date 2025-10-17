@@ -80,12 +80,12 @@
     </header>
     <main class="main-content">
         <section class="contact-info">
-            <img src="assets/gambar/kantor.jpg" alt="Kantor Desa Cimahi">
+            <img src="assets/gambar/kantor desa.jpg" alt="Kantor Desa Cimahi">
             <div class="contact-details">
                 <h2>Informasi Kontak</h2>
-                <p><strong>Alamat :</strong> JL. Cikukulu, Jl. Cicantayan No.171, Kabupaten Sukabumi, Jawa Barat 43155, Indonesia.3</p>
-                <p><strong>whatsapp :</strong> 085778019839</p>
-                <p><strong>Email :</strong> desacimahi@gmail.com</p>
+                <p><strong>Alamat :</strong> JL. Cikukulu, Jl. Cicantayan No.171, Kabupaten Sukabumi, Jawa Barat 43155, Indonesia</p>
+                <p><strong>Telephone :</strong> (0266) 239610</p>
+                <p><strong>Email :</strong> desacimahi1984@gmail.com</p>
             </div>
         </section>
     </main>

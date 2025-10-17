@@ -18,7 +18,7 @@
                     <img src="assets/gambar/fotbar1.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar1">
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/gambar/fotbar1.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar2">
+                    <img src="assets/gambar/kantor desa.jpg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar2">
                 </div>
                 <div class="col-md-4">
                     <img src="assets/gambar/fotbar2.jpeg" class="d-block w-100 rounded-4 shadow-sm" alt="gambar3">

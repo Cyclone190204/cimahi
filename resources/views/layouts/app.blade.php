@@ -136,7 +136,7 @@
             <!-- Kolom Menu -->
             <div class="col-lg-4 mt-4">
                 <b>MENU</b>
-                <hr />
+                <hr/>
                 <ul class="list-unstyled">
                     <li><a href="https://www.jabarprov.go.id/" class="text-white" target="_blank">Website Provinsi Jabar</a></li>
                     <li><a href="https://sukabumikab.go.id/" class="text-white" target="_blank">Pemerintah Kab. Sukabumi</a></li>
@@ -153,12 +153,12 @@
                     <i class="bi bi-building-fill"></i>
                     JL. Cikukulu, Jl. Cicantayan No.171, Kabupaten Sukabumi, Jawa Barat 43155, Indonesia.
                 </p>
-                <p><i class="bi bi-telephone-fill"></i> 0858-6384-0858</p>
-                <p><i class="bi bi-envelope"></i> desacimahi@gmail.com</p>
+                <p><i class="bi bi-telephone-fill"></i> (0266) 239610</p>
+                <p><i class="bi bi-envelope"></i> desacimahi1984@gmail.com</p>
                 <p>
-                    <a href="https://www.google.com/maps/place/Sukamanis,+Kec.+Kadudampit,+Kabupaten+Sukabumi,+Jawa+Barat/@-6.8438805,106.8762566,13z" 
+                    <a href="https://www.google.com/maps/place/Cimahi,+Cicantayan,+Sukabumi+Regency,+West+Java/@-6.9118776,106.8464083,15z/data=!3m1!4b1!4m6!3m5!1s0x2e6836fc510c4db7:0x50090ff570491cc6!8m2!3d-6.9123345!4d106.8561884!16s%2Fg%2F122ysnq1?entry=ttu&g_ep=EgoyMDI1MTAxMi4wIKXMDSoASAFQAw%3D%3D" 
                        class="text-white" target="_blank">
-                        <i class="bi bi-geo-alt-fill me-2"></i> Lokasi Desa Cimahi
+                        <i class="bi bi-geo-alt-fill me-2"></i>Lokasi Desa Cimahi
                     </a>
                 </p>
             </div>

@@ -21,7 +21,7 @@
 
          <div class="col-sm-8">
             <label class="form-label">tempat lahir ayah</label>
-            <input name="tempat_lahir_ayah" type="text" class="form-control @error('tempat_lahir_ayah) is-invalid @enderror" required>
+            <input name="tempat_lahir_ayah" type="text" class="form-control @error('tempat_lahir_ayah') is-invalid @enderror" required>
             @error('tempat_lahir_ayah')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -29,7 +29,7 @@
 
          <div class="col-sm-8">
             <label class="form-label">Tanggal Lahir ayah</label>
-            <input name="tanggal_lahir_ayah" type="date" class="form-control @error('tanggal_lahir_ayah') is-invalid @enderror" required>
+            <input name="tanggal_lahir_ayah"  class="form-control @error('tanggal_lahir_ayah') is-invalid @enderror" required>
             @error('tanggal_lahir_ayah')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -69,7 +69,7 @@
 
          <div class="col-sm-8">
             <label class="form-label">tempat lahir ibu</label>
-            <input name="tempat_lahir_ibu" type="text" class="form-control @error('tempat_lahir_ibu) is-invalid @enderror" required>
+            <input name="tempat_lahir_ibu" type="text" class="form-control @error('tempat_lahir_ibu') is-invalid @enderror" required>
             @error('tempat_lahir_ibu')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -77,7 +77,7 @@
 
          <div class="col-sm-8">
             <label class="form-label">Tanggal Lahir ibu</label>
-            <input name="tanggal_lahir_ibu" type="date" class="form-control @error('tanggal_lahir_ibu') is-invalid @enderror" required>
+            <input name="tanggal_lahir_ibu" class="form-control @error('tanggal_lahir_ibu') is-invalid @enderror" required>
             @error('tanggal_lahir_ibu')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -125,7 +125,7 @@
 
          <div class="col-sm-8">
             <label class="form-label">Tanggal Lahir anak</label>
-            <input name="tanggal_lahir_anak" type="date" class="form-control @error('tanggal_lahir_anak') is-invalid @enderror" required>
+            <input name="tanggal_lahir_anak" class="form-control @error('tanggal_lahir_anak') is-invalid @enderror" required>
             @error('tanggal_lahir_anak')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -155,14 +155,13 @@
             @enderror
         </div>
 
-        < class="col-sm-8">
+        <div class="col-sm-8">
             <label class="form-label">alamat anak</label>
             <input name="alamat_anak" type="text" class="form-control @error('alamat_anak') is-invalid @enderror" required>
             @error('alamat_anak')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        </div>  
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>
         </div>

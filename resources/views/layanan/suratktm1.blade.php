@@ -58,7 +58,7 @@
             </div>
            <div class="col-sm-8">
                     <label class="form-label">Tanggal lahir</label>
-                    <input name="tanggal_lahir" type="date" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
+                    <input name="tanggal_lahir" type="text" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
                     @error('tanggal_lahir')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
         </div>
@@ -76,6 +76,24 @@
                 @error('pekerjaan') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
         </div>
+        
+        {{-- Warga Negara --}}
+        <div class="row justify-content-md-center mb-3">
+            <div class="col-md-8">
+                <label class="form-label">Warga Negara</label>
+                <input name="kewarganegaraan" type="text" class="form-control @error('kewarganegaraan') is-invalid @enderror">
+                @error('kewarganegaraan') <div class="invalid-feedback">{{ $message }}</div> @enderror
+            </div>
+        </div>
+
+        {{-- Status --}}
+        <div class="row justify-content-md-center mb-3">
+            <div class="col-md-8">
+                <label class="form-label">Status perkawinan</label>
+                <input name="status" type="text" class="form-control @error('status') is-invalid @enderror">
+                @error('status') <div class="invalid-feedback">{{ $message }}</div> @enderror
+            </div>
+       </div>
 
         {{-- Alamat --}}
         <div class="row justify-content-md-center mb-3">
@@ -113,23 +131,7 @@
             </div>
         </div>
 
-        {{-- Warga Negara --}}
-        <div class="row justify-content-md-center mb-3">
-            <div class="col-md-8">
-                <label class="form-label">Warga Negara</label>
-                <input name="kewarganegaraan" type="text" class="form-control @error('kewarganegaraan') is-invalid @enderror">
-                @error('kewarganegaraan') <div class="invalid-feedback">{{ $message }}</div> @enderror
-            </div>
-        </div>
-
-        {{-- Status --}}
-        <div class="row justify-content-md-center mb-3">
-            <div class="col-md-8">
-                <label class="form-label">Status perkawinan</label>
-                <input name="status" type="text" class="form-control @error('status') is-invalid @enderror">
-                @error('status') <div class="invalid-feedback">{{ $message }}</div> @enderror
-            </div>
-       </div>
+        
         <div class="col-md-8 text-center mt-3">
             <button class="btn btn-success" type="submit">Submit</button>
         </div>

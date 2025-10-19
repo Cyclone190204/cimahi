@@ -87,7 +87,7 @@
         </div>
 
         <div class="col-md-8">
-            <label class="form-label">Alamat</label>
+            <label class="form-label">Nama Kampung</label>
             <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror"></textarea>
             @error('alamat')
                 <div class="invalid-feedback">{{ $message }}</div>

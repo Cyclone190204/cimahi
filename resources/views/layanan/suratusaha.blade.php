@@ -47,14 +47,14 @@
 
         {{-- Tempat & Tanggal Lahir --}}
         <div class="row justify-content-md-center mb-3">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <label class="form-label">Tempat Lahir</label>
                 <input name="tempat_lahir" type="text" class="form-control @error('tempat_lahir') is-invalid @enderror" required>
                 @error('tempat_lahir')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-8">
                 <label class="form-label">Tanggal Lahir</label>
                 <input name="tanggal_lahir" type="text" class="form-control @error('tanggal_lahir') is-invalid @enderror" required>
                 @error('tanggal_lahir')

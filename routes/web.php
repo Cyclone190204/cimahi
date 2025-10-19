@@ -38,7 +38,9 @@ Route::get('/kontak', function () {
     return view('kontak');
 })->name('kontak');
 
-
+Route::get('/sign/document', [SignDocumentController::class, 'index'])->name('sign.document');
+Route::post('/sign/document', [SignDocumentController::class, 'store'])->name('sign.document.store');
+Route::get('/document/signed/{code}', [SignDocumentController::class, 'showSignedDocument'])->name('document.signed');
 
 
 // Auth

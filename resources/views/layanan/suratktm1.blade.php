@@ -99,8 +99,8 @@
         <div class="row justify-content-md-center mb-3">
             <div class="col-sm-8">
                 <label class="form-label">Nama Kampung</label>
-                <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror"></textarea>
-                @error('alamat') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                <textarea name="kampung" class="form-control @error('kampung') is-invalid @enderror"></textarea>
+                @error('kampung') <div class="invalid-feedback">{{ $message }}</div> @enderror
             </div>
         </div>
 

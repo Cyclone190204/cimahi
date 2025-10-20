@@ -18,6 +18,7 @@
                 <input name="hari" type="text" class="form-control @error('hari') is-invalid @enderror" required>
                 @error('hari')<div class="invalid-feedback">{{ $message }}</div>@enderror
             </div>
+            
             <div class="col-sm-6">
                 <label class="form-label">Tanggal</label>
                 <input name="tanggal" type="text" class="form-control @error('tanggal') is-invalid @enderror" required>

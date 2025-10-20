@@ -107,6 +107,22 @@
             @enderror
         </div>
 
+          <div class="col-sm-8">
+            <label class="form-label">RT</label>
+            <textarea name="rt" class="form-control @error('rt') is-invalid @enderror" required></textarea>
+            @error('rt')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+         <div class="col-sm-8">
+            <label class="form-label">RW</label>
+            <textarea name="rw" class="form-control @error('rw') is-invalid @enderror" required></textarea>
+            @error('rw')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
          <div class="col-sm-8">
             <label class="form-label">tanggal pemakaman</label>
             <textarea name="tanggal_pemakaman" class="form-control @error('tanggal_pemakaman') is-invalid @enderror" required></textarea>

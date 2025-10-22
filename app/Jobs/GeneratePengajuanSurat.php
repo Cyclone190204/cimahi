@@ -85,6 +85,10 @@ class GeneratePengajuanSurat implements ShouldQueue
                         case "date":
                             $valFn = fn($e) => Date::parse($e)->format($val);
                             break;
+                        case "locale-date":
+                            $valFn = fn($e) => Date::parse($e)->isoFormat($val);
+                            break;
+
                     }
 
                     $v = rescue(fn() => $valFn($v), $v);
